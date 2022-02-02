@@ -1,0 +1,270 @@
+$default-font: "Montserrat", sans-serif
+$accent: #91BF29
+$text: #303844
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+
+
+.logo
+    display: inline-block
+    width: 95px
+    height: 45px
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-image: url(../img/logo.svg)
+
+.menu-toggler
+    width: 48px
+    height: 48px
+    display: inline-block
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-image: url(../img/menu.svg)
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+        opacity: 0.8
+.heading
+    &_md
+        font-weight: 600
+        font-size: 36px
+        line-height: 130%
+        color: #000000
+
+.text-center
+    text-align: center
+.pt
+    padding-top: 70px
+.pb
+    padding-bottom: 70px  
+
+.btn
+    background: #91BF29
+    border-radius: 30px
+    font-size: 18px
+    color: #F2F7FA
+    border: 0
+    height: 60px
+    width: 300px
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+        opacity: 0.8
+
+.text
+    font-size: 16px
+    line-height: 130%
+    color: #303844
+
+    ul
+        li
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 140%
+            color: #666B71
+            list-style-type: none
+            padding-left: 20px
+            position: relative
+            &:before
+                content: ""
+                width: 3px
+                height: 3px
+                background-color: #666B71
+                position: absolute
+                top: 8px
+                left: 0
+                border-radius: 50%
+
+
+.slider
+    .slick-prev, .slick-next
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: rgba(255,255,255,0.5)
+        border: 0
+        position: absolute
+        top: 50%
+        margin-top: -25px
+        cursor: pointer
+        display: flex
+        z-index: 10
+        svg
+            margin: auto
+            path
+                transition: .3s ease
+        &:hover
+            svg
+                path
+                    fill: $accent
+
+    .slick-prev
+        left: -60px
+
+    .slick-next
+        right: -60px
+        svg
+            transform: rotate(180deg)
+
+
+    .slick-dots
+        width: 100%
+        display: flex
+        justify-content: center
+        li
+            list-style-type: none
+            width: 10px
+            height: 10px
+            display: inline-flex
+            margin-right: 10px
+            button
+                border: 0
+                text-indent: -99999px
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background-color: #E6E7E8
+                transition: .3s ease
+                cursor: pointer
+                &:hover
+                    background-color: $accent
+
+            &.slick-active
+                button
+                    background-color: $accent
+
+
+.egg
+    background-repeat: no-repeat
+    background-position: 0 0
+    margin-top: 30px
+    &__inner
+    
+    &__digit
+        display: flex
+        img
+            position: relative
+            left: 25px
+        span
+            font-style: normal
+            font-weight: normal
+            font-size: 64px
+            line-height: 78px
+            color: #FFFFFF
+
+    &__title
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 24px
+        color: #FFFFFF
+        width: 150px
+        padding-left: 25px
+
+    &_black
+        .egg
+            &__digit
+                span
+                    color: #303844
+            &__title
+                color: #303844
+    &_1
+        background-image: url(../img/egg1.svg)
+        width: 307px
+        height: 278px
+        padding-top: 84px
+        padding-left: 120px
+    &_2
+        background-image: url(../img/egg2.svg)
+        width: 307px
+        height: 249px
+        padding-top: 84px
+        padding-left: 75px
+    &_3
+        background-image: url(../img/egg3.svg)
+        width: 328px
+        height: 254px
+        padding-top: 84px
+        padding-left: 110px
+    &_4
+        background-image: url(../img/egg4.svg)
+        width: 296px
+        height: 295px
+        padding-top: 81px
+        padding-left: 97px
+    &_5
+        background-image: url(../img/egg5.svg)
+        width: 261px
+        height: 265px
+        padding-top: 80px
+        padding-left: 60px
+    &_6
+        background-image: url(../img/egg6.svg)
+        width: 307px
+        height: 287px
+        padding-top: 80px
+        padding-left: 70px
+
+.card
+    border: 1px solid #D7F0FF
+    border-radius: 30px
+    overflow: hidden
+    height: 100%
+    &__img
+        img
+            border-radius: 30px
+            max-width: 100%
+            height: auto
+    &__title
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 24px
+        color: #303844
+        margin-bottom: 16px
+    &__content
+        padding: 30px 20px
+
+
+.col-card
+    margin-bottom: 30px
+
+
+
+.form
+    
+    &__input
+        background: #FFFFFF
+        border-radius: 30px
+        width: 100%
+        height: 60px
+        border: 0
+        padding-left: 20px
+        padding-right: 20px
+        margin-bottom: 15px
+    &__text
+        background: #FFFFFF
+        border-radius: 30px
+        width: 100%
+        height: 60px
+        border: 0
+        font-size: 18px
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 10px
+        padding-bottom: 10px
+        height: 200px   
+        margin-bottom: 20px
+    .btn
+        margin-left: auto
+        margin-right: auto
+        display: block
+        margin-top: 27px

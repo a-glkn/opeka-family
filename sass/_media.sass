@@ -1,0 +1,110 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+
+
+    
+// ≥1200px
++media-breakpoint-down(lg)
+   
+// ≥992px
++media-breakpoint-down(md)
+    .heading
+        &_md
+            font-size: 26px
+
+    .slider
+        .col-text
+            margin-top: -4em
+
+        .slick-dots
+            margin-top: 30px
+
+
+    .section_ecosystem
+        background-position: center
+        background-size: cover
+
+    .section_form
+        padding-bottom: 90px
+
+    .footer
+        margin-top: 0
+// ≥768px
++media-breakpoint-down(sm)
+    .egg
+        margin-left: auto
+        margin-right: auto
+        margin-top: -60px
+        position: relative
+        &_1
+            margin-top: 40px
+            left: -60px
+            z-index: 6
+        &_2
+            left: 60px
+            z-index: 5
+        &_3
+            left: -60px
+            z-index: 4
+        &_4
+            left: 60px
+            z-index: 3
+        &_5
+            left: -60px
+            z-index: 2
+            margin-top: -110px
+        &_6
+            left: 60px
+            z-index: 1
+
+    .slider
+        .slick-prev
+            left: 0
+            top: 30%
+
+        .slick-next
+            right: 0
+            top: 30%
+    
+
+    .footer
+        position: relative
+        .logo
+            display: block
+            margin-left: auto
+            margin-right: auto
+        .col-right
+            text-align: center
+            margin-top: 120px
+        &:before
+            content: ""
+            display: block  
+            width: 596px * 1.5
+            height: 444px * 1.5
+            position: absolute
+            top: -450px
+            left: 0
+            background-image: url(../img/line.svg)
+            background-size: 894px 666px
+            left: 50%
+            margin-left: -447px
+
+// ≥576px
++media-breakpoint-down(xs)
+    
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
