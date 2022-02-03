@@ -24,6 +24,9 @@
 
 
     .section_ecosystem
+        
+
+    .bg-blue-egg
         background-position: center
         background-size: cover
 
@@ -39,6 +42,37 @@
         width: 100%
         .header-container
             padding-top: 0
+
+    .bg-blue-egg-sm-2
+        background-image: url(../img/line3.svg)
+        background-repeat: no-repeat
+        background-position: 50% top
+
+    .section_service
+        .row-1
+            margin-top: 30px
+        .egg_01
+            margin-top: 0
+            position: relative
+            z-index: 3
+            margin-left: auto
+            margin-right: auto
+        .egg_02
+            position: relative
+            z-index: 2
+            margin-top: -80px
+            margin-left: auto
+            margin-right: auto
+        .egg_03
+            position: relative
+            z-index: 1
+            margin-top: -80px
+            margin-left: auto
+            margin-right: auto
+    .section_region
+        .col-item 
+            margin-top: 60px
+
 // ≥768px
 +media-breakpoint-down(sm)
     .egg
@@ -108,7 +142,18 @@
         .slider__item
             overflow: hidden
 
-        
+    		
+    .line-orange    
+        &:after
+            top: 0
+            left: -90%
+
+    .feedback
+        .slick-next
+            right: 0
+        .slick-prev
+            left: 0
+    
 // ≥576px
 +media-breakpoint-down(xs)
 
@@ -122,6 +167,11 @@
         .slider__content
             padding-left: 15px
             padding-right: 15px
+
+
+    .feedback__item
+        margin-left: 0
+        margin-right: 0
     
 /*==========  Mobile First  ==========*/
 

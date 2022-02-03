@@ -39,8 +39,10 @@ $gutter: $grid-gutter-width
         color: #000000
 
 .main-wrapper
+    position: relative
     overflow: hidden
     width: 100%
+    max-width: 100%
 
 .text-center
     text-align: center
@@ -88,35 +90,37 @@ $gutter: $grid-gutter-width
                 border-radius: 50%
 
 
-.slider
-    .slick-prev, .slick-next
-        width: 50px
-        height: 50px
-        border-radius: 50%
-        background-color: rgba(255,255,255,0.5)
-        border: 0
-        position: absolute
-        top: 50%
-        margin-top: -25px
-        cursor: pointer
-        display: flex
-        z-index: 10
+.slick-prev, .slick-next
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: rgba(255,255,255,0.5)
+    border: 0
+    position: absolute
+    top: 50%
+    margin-top: -25px
+    cursor: pointer
+    display: flex
+    z-index: 10
+    svg
+        margin: auto
+        path
+            transition: .3s ease
+    &:hover
         svg
-            margin: auto
             path
-                transition: .3s ease
-        &:hover
-            svg
-                path
-                    fill: $accent
+                fill: $accent
 
-    .slick-prev
-        left: -60px
+.slick-prev
+    left: -60px
 
-    .slick-next
-        right: -60px
-        svg
-            transform: rotate(180deg)
+.slick-next
+    right: -60px
+    svg
+        transform: rotate(180deg)
+
+.slider
+    
 
 
     .slick-dots
@@ -217,11 +221,43 @@ $gutter: $grid-gutter-width
         padding-top: 80px
         padding-left: 70px
 
+    &_01
+        background-image: url(../img/egg01.svg)
+        width: 269px
+        height: 213px
+
+    &_02
+        background-image: url(../img/egg02.svg)
+        width: 293px
+        height: 255px
+
+    &_03
+        background-image: url(../img/egg03.svg)
+        width: 301px
+        height: 255px
+
+    &_v2
+        padding-top: 90px
+        padding-left: 20px
+        .egg
+            &__title
+                font-size: 18px
+                font-weight: normal
+                width: 100%
+            &__digit
+                span
+                    font-size: 52px
+                    line-height: 1.21
+                    text-align: center
+
+
+
 .card
     border: 1px solid #D7F0FF
     border-radius: 30px
     overflow: hidden
     height: 100%
+    background-color: #fff
     &__img
         img
             border-radius: 30px
@@ -272,3 +308,119 @@ $gutter: $grid-gutter-width
         margin-right: auto
         display: block
         margin-top: 27px
+
+
+.list
+    font-size: 18px
+    line-height: 140%
+    color: #303844
+    padding-left: 28px
+    background-repeat: no-repeat
+    background-position: 0 0
+    margin-top: 60px
+    &_1
+        background-image: url(../img/point1.svg)
+
+    &_2
+        background-image: url(../img/point2.svg)
+
+    &_3
+        background-image: url(../img/point3.svg)
+
+    &_4
+        background-image: url(../img/point4.svg)
+
+    &_5
+        background-image: url(../img/point5.svg)
+
+    &_6
+        background-image: url(../img/point6.svg)
+
+
+
+.feedback
+    &__item
+        height: 100%
+        border: 1px solid #D7F0FF
+        border-radius: 40px
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 40px
+        padding-bottom: 40px
+        &-tags
+            margin-bottom: 16px
+            a
+                text-decoration: none
+                font-size: 14px
+                line-height: 17px
+                color: #91BF29
+        &-title
+            font-weight: 600
+            font-size: 22px
+            line-height: 27px
+            color: #36474F
+            margin-bottom: 16px
+
+        &-text
+            font-size: 18px
+            line-height: 22px
+            color: #36474F
+
+
+.feedback__item
+    margin-left: 10px
+    margin-right: 10px
+
+
+.city
+    font-weight: 600
+    font-size: 22px
+    line-height: 27px
+    text-align: center
+    color: #666B71
+
+
+
+.section_region
+    .heading
+        margin-bottom: 16px
+
+    .row-1
+        margin-top: 60px
+
+.point
+    position: relative
+    width: 67px
+    height: 67px
+    border-radius: 50%
+    display: inline-block
+    &:after
+        content: ""
+        display: block
+        width: 27px
+        height: 27px
+        border-radius: 50%
+        position: absolute
+        left: 50%
+        top: 50%
+        margin-top: -13.5px
+        margin-left: -13.5px
+        border: 1px solid #fff
+    &_1
+        background-color: rgba(145, 192, 43, .18)
+        &:after
+            background-color: rgba(145, 192, 43, 1)
+
+    &_2
+        background-color: rgba(253, 184, 20, .18)
+        &:after
+            background-color: rgba(253, 184, 20, 1)
+
+    &_3
+        background-color: rgba(48, 56, 68, .18)
+        &:after
+            background-color: rgba(48, 56, 68, 1)
+
+
+
+            
