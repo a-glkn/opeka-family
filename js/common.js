@@ -70,4 +70,8 @@ $(function() {
 	$(window).on("scroll", function() {
 		headerScroll();
 	});
+
+
+    $('.form-order__input_tel, .form__input_tel').inputmask("+7 (999) 999 99 99");
+
 });

@@ -72,7 +72,26 @@
     .section_region
         .col-item 
             margin-top: 60px
+    .step-block
+        position: relative
+        &:after
+            content: ""
+            display: block
+            width: 16px
+            height: 25px
+            position: absolute
+            left: 50%
+            margin-left: -8px
+            bottom: -27px
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-image: url(../img/arr.svg)
 
+    .section_order
+        .col-item:last-child
+            .step-block
+                &:after
+                    display: none
 // ≥768px
 +media-breakpoint-down(sm)
     .egg
