@@ -45,7 +45,7 @@ $gutter: $grid-gutter-width
     max-width: 100%
 
 .text-center
-    text-align: center
+    text-align: center 
 .pt
     padding-top: 70px
 .pb
@@ -53,6 +53,9 @@ $gutter: $grid-gutter-width
 
 .w-auto
     width: auto !important
+
+.text-green
+    color: #91BF29 !important
 
 .btn
     background: #91BF29
@@ -66,7 +69,10 @@ $gutter: $grid-gutter-width
     transition: .3s ease
     &:hover
         opacity: 0.8
-
+    &_secondary
+        background: #fff
+        color: #303844
+        border: 2px solid #D7F0FF
 a.btn
     display: inline-block
     line-height: 60px
@@ -188,7 +194,8 @@ a.btn
         text-align: left
         width: 150px
         padding-left: 25px
-
+        &_center
+            text-align: center !important
     &_black
         .egg
             &__digit
@@ -263,7 +270,26 @@ a.btn
                     text-align: center
 
 
+    &_g1
+        background-image: url(../img/egg-green.svg)
+        width: 301px
+        height: 255px
 
+    &_o1
+        padding-left: 0
+        .egg
+            &__title
+                padding-left: 0
+                text-align: center
+            &__digit
+                width: 100%
+                text-align: center
+                span
+                    display: inline-block
+                    width: 100%
+                    font-size: 48px
+                    text-align: center
+        
 .card
     border: 1px solid #D7F0FF
     border-radius: 30px
@@ -285,6 +311,9 @@ a.btn
     &__content
         padding: 30px 20px
 
+    .btn
+        width: 100%
+        margin-top: 10px
 
 .col-card
     margin-bottom: 30px
@@ -292,7 +321,6 @@ a.btn
 
 
 .form
-    
     &__input
         background: #FFFFFF
         border-radius: 30px
@@ -320,7 +348,76 @@ a.btn
         margin-right: auto
         display: block
         margin-top: 27px
+    .input-inline
+        width: 100px
+        display: inline-block
+        height: 50px
+        border: 2px solid #D7F0FF
+        border-radius: 30px
+        padding-left: 10px
+        padding-right: 10px
+    .check-btn
+        display: inline-block
+        position: relative
+        padding-left: 30px
+        margin-bottom: 20px
+        cursor: pointer
+        font-size: 16px
+        color: #2A2A2A
+        user-select: none
+        margin-right: 20px
+        input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+            height: 0
+            width: 0
+        .checkmark
+            position: absolute
+            top: 0
+            left: 0
+            height: 20px
+            width: 20px
+            background-color: #fff
+            border-radius: 50%
+            border: 2px solid #D7F0FF
+            &:after 
+                content: ""
+                position: absolute
+                width: 10px
+                height: 10px
+                top: 50%
+                left: 50%
+                margin-left: -5px
+                margin-top: -5px
+                background-color: #D7F0FF
+                border-radius: 50%
+        &:hover input ~ .checkmark 
+            background-color: #fff
 
+        input:checked ~ .checkmark 
+            background-color: #fff
+
+        input:checked ~ .checkmark:after 
+            display: block
+
+
+        .checkmark:after 
+            display: none
+         
+
+    select
+        width: 100%
+        border: 2px solid #D7F0FF
+        height: 50px
+        border-radius: 30px
+        padding-left: 20px
+        -moz-appearance: none
+        -webkit-appearance: none
+        appearance: none
+        background-repeat: no-repeat
+        background-image: url(../img/arr-select.svg)
+        background-position: 96% center
 
 .list
     font-size: 18px
@@ -435,6 +532,7 @@ a.btn
 
 
 
+
 .form-order
     &__input, &__text
         width: 100%
@@ -519,3 +617,75 @@ a.btn
         font-size: 18px
         color: #303844
         margin-bottom: 32px
+
+.filter-btn
+    cursor: pointer
+    font-size: 18px
+    line-height: 22px
+    color: #303844
+    background-color: #D7F0FF
+    height: 50px
+    border-radius: 30px
+    width: 100%
+    border: 0
+    padding-left: 30px
+    text-align: left
+    padding-right: 60px
+    position: relative
+    &:before
+        content: ''
+        width: 21px
+        height: 21px
+        background-repeat: no-repeat
+        background-image: url(../img/filter.svg)
+        position: absolute
+        top: 15px
+        right: 30px
+
+.search-btn
+    font-size: 18px
+    line-height: 36px
+    color: #F2F7FA
+    background-color: #91BF29
+    width: 100%
+    height: 60px
+    border-radius: 30px
+    border: 0
+    display: inline-block
+    background-repeat: no-repeat
+    background-position: 65% center
+    background-image: url(../img/search.svg)
+.form-filter
+    .search-btn
+        margin-bottom: 30px
+        display: none
+    
+.filter
+    margin-bottom: 20px
+    .filter-btn
+        display: block
+    &__row
+        font-size: 16px
+        color: #2A2A2A
+        margin-top: 20px
+    &__inner
+        display: none
+    &__hide
+        cursor: pointer
+        text-align: center
+        margin-top: 30px
+        font-size: 18px
+        line-height: 22px
+        color: #666B71
+    &.active
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 20px
+        padding-bottom: 30px
+        border: 1px solid #D7F0FF
+        border-radius: 30px
+        .filter-btn
+            display: none
+        .filter
+            &__inner
+                display: block
