@@ -86,9 +86,13 @@
             background-repeat: no-repeat
             background-position: 0 0
             background-image: url(../img/arr.svg)
+            transform: rotate(0deg)
+            top: auto
+            margin-top: 0
 
     .section_order
         .col-item:last-child
+            margin-bottom: 0
             .step-block
                 &:after
                     display: none
@@ -235,6 +239,10 @@
     .egg-5
         margin-left: -50px
         margin-top: -36px
+
+    .section_first 
+        .slider__content
+            background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
 // ≥576px
 +media-breakpoint-down(xs)
 

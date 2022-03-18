@@ -53,9 +53,11 @@ body
 	z-index: 100
 	top: 0
 	left: 0
-	display: none
+	display: flex
 	text-align: center
 	user-select: none
+	transition: all 0.3s ease
+	top: -100%
 	ul
 		margin: auto
 		li
@@ -73,6 +75,9 @@ body
 	overflow: hidden
 	.menu
 		display: flex
+		top: 0
+
+
 .header-container
 	display: flex
 	justify-content: space-between
@@ -325,4 +330,8 @@ body
 .section_order
 	.col-item
 		margin-bottom: 25px
+		&:last-child
+			.step-block
+				&:after
+					display: none
 @import "media" // Always at the end
