@@ -9,6 +9,17 @@
 // ≥1200px
 +media-breakpoint-down(lg)
    
+    .step-block
+        width: 290px
+        .form-order__input
+            font-size: 15px
+        .radios
+            label
+                font-size: 15px
+
+    .steps
+        .step-block
+            width: 100% !important
 // ≥992px
 +media-breakpoint-down(md)
     .heading
@@ -74,22 +85,8 @@
             margin-top: 60px
     .step-block
         position: relative
-        &:after
-            content: ""
-            display: block
-            width: 16px
-            height: 25px
-            position: absolute
-            left: 50%
-            margin-left: -8px
-            bottom: -27px
-            background-repeat: no-repeat
-            background-position: 0 0
-            background-image: url(../img/arr.svg)
-            transform: rotate(0deg)
-            top: auto
-            margin-top: 0
-
+       
+   
     .section_order
         .col-item:last-child
             margin-bottom: 0
@@ -243,6 +240,13 @@
     .section_first 
         .slider__content
             background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+
+
+    .steps__item-inner
+        padding-right: 25px
+        padding-left: 0
+        &:after
+            right: 5px
 // ≥576px
 +media-breakpoint-down(xs)
 
@@ -264,6 +268,9 @@
 
     .bg-blue-egg-lg
         background-size: auto
+
+
+    
 /*==========  Mobile First  ==========*/
 
 // ≤576px

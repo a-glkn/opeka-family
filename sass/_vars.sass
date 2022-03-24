@@ -721,35 +721,55 @@ a.btn_secondary
         [type="radio"]:checked + label
             background-color: #D7F0FF
   
-     
+
+
 .step-block
     background-color: #fff
     display: flex
     flex-direction: column
     height: 100%
     padding: 30px
+    width: 349px
+    position: relative
     border: 2px solid #D7F0FF
     border-radius: 30px
     text-align: right
+    min-height: 303px
     &__title
         text-align: center
         font-size: 18px
         color: #303844
         margin-bottom: 32px
-    &:after
-        content: ""
-        display: block
-        width: 16px
-        height: 25px
-        position: absolute
-        top: 50%
-        margin-top: -12.5px
-        right: -9px
-        background-repeat: no-repeat
-        background-position: 0 0
-        background-image: url(../img/arr.svg)
-        transform: rotate(-90deg)
+   
 
+.steps
+    .btn
+       width: calc(100%)
+    &__item
+        .step-block
+            width: 100% !important
+        height: 100%
+        &-inner
+            padding-left: 12.5px
+            padding-right: 12.5px
+            position: relative
+            &:after
+                content: ""
+                display: block
+                width: 16px
+                height: 25px
+                position: absolute
+                top: 50%
+                margin-top: -12.5px
+                right: -9px
+                background-repeat: no-repeat
+                background-position: 0 0
+                background-image: url(../img/arr.svg)
+                transform: rotate(-90deg)
+        &:last-child
+            .steps__item-inner
+                &:after
+                    display: none
 .filter-btn
     cursor: pointer
     font-size: 18px
