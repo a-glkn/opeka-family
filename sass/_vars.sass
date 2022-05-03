@@ -98,7 +98,8 @@ a.btn_secondary
     font-size: 16px
     line-height: 130%
     color: #303844
-
+    p.lg
+        font-size: 24px
     ul
         li
             font-style: normal
@@ -151,8 +152,6 @@ a.btn_secondary
 
 .slider
     
-
-
     .slick-dots
         width: 100%
         display: flex
@@ -255,7 +254,52 @@ a.btn_secondary
         height: 287px
         padding-top: 80px
         padding-left: 70px
-
+    /////
+    &_1-2
+        background-image: url(../img/egg1.svg)
+        width: 307px
+        height: 278px
+        padding-top: 60px
+        padding-left: 45px
+    &_2-2
+        background-image: url(../img/egg2.svg)
+        width: 307px
+        height: 249px
+        padding-top: 40px
+        padding-left: 35px
+        .egg__title
+            width: 240px
+    &_3-2
+        background-image: url(../img/egg3.svg)
+        width: 328px
+        height: 254px
+        padding-top: 34px
+        padding-left: 40px
+        .egg__title
+            width: 205px
+    &_4-2
+        background-image: url(../img/egg4.svg)
+        width: 296px
+        height: 295px
+        padding-top: 52px
+        padding-left: 37px
+        .egg__title
+            width: 205px
+    &_5-2
+        background-image: url(../img/egg5.svg)
+        width: 261px
+        height: 265px
+        padding-top: 50px
+        padding-left: 0px
+    &_6-2
+        background-image: url(../img/egg6.svg)
+        width: 307px
+        height: 287px
+        padding-top: 50px
+        padding-left: 40px
+        .egg__title
+            width: 220px
+    ///
     &_01
         background-image: url(../img/egg01.svg)
         width: 269px
@@ -588,8 +632,6 @@ a.btn_secondary
 
     &_6
         background-image: url(../img/point6.svg)
-
-
 
 .feedback
     &__item
@@ -1095,6 +1137,49 @@ a.btn_secondary
             position: absolute
             left: 15px
             bottom: 32px
+        &:hover
+            border-color: #91BF29
+
+
+.service-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    &__item
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.2
+        color: #303844
+        text-decoration: none !important
+        width: calc(33.3333% - 20px)
+        border-radius: 30px
+        border: 1px solid #A4DDFF
+        transition: .3s ease
+        height: 110px
+        display: flex
+        background-color: #fff
+        padding-left: 50px
+        padding-right: 30px
+        margin-bottom: 20px
+        position: relative
+        &:before
+            content: ''
+            display: block
+            width: 10px
+            height: 17px
+            background-repeat: no-repeat
+            background-position: 0 0
+            position: absolute
+            left: 30px
+            top: 50%
+            margin-top: -8.5px
+            background-image: url(../img/q.svg)
+        span
+            margin-top: auto
+            margin-bottom: auto
+        &_lg
+            width: calc(50% - 20px)
         &:hover
             border-color: #91BF29
 
