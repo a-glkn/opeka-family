@@ -14,21 +14,29 @@ $gutter: $grid-gutter-width
 
 .logo
     display: inline-block
-    width: 95px
-    height: 45px
+    width: 141px
+    min-width: 141px
+    height: 67px
     background-position: 0 0
     background-repeat: no-repeat
-    background-image: url(../img/logo.svg)
+    background-image: url(../img/logo-new.svg)
+
+.wrapper
+    max-width: 1600px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
 
 .menu-toggler
     width: 48px
     height: 48px
-    display: inline-block
     background-position: 0 0
     background-repeat: no-repeat
     background-image: url(../img/menu.svg)
     cursor: pointer
     transition: .3s ease
+    display: none
     &:hover
         opacity: 0.8
 .heading

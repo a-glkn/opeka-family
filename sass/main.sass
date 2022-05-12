@@ -32,12 +32,58 @@ body
 .header
 	z-index: 101
 	padding-bottom: 16px
-	height: 80px
 	width: 100%
 	top: 0
 	left: 0
 	position: fixed
 	background-color: transparent
+	&__menu
+		width: 100%
+		padding-left: 30px
+		padding-right: 30px
+		ul
+			display: flex
+			justify-content: space-between
+			li
+				list-style-type: none
+				a
+					font-style: normal
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.2222
+					color: #303844
+					position: relative
+					padding-bottom: 10px
+					text-decoration: none
+					&:after
+						position: absolute
+						left: 50%
+						margin-left: -34px
+						content: ''
+						display: block
+						width: 68px
+						height: 2px
+						bottom: 0
+						transition: .3s ease
+						opacity: 0
+						background-color: #91BF29
+					&:hover
+						&:after
+							opacity: 1
+				&.current
+					a
+						&:after
+							opacity: 1
+
+	.phone
+		min-width: 210px
+		a
+			font-style: normal
+			font-weight: 600
+			font-size: 24px
+			line-height: 1.21
+			color: #91BF29
+
 
 .scrolled
 	.header
@@ -353,13 +399,13 @@ body
 	background-color: #303844
 	margin-top: 70px
 	.logo
-		width: 295.2px
-		height: 228.6px
+		width: 219px
+		height: 164px
 		display: inline-flex
 		background-repeat: no-repeat
 		background-position: 0 0
-		background-image: url(../img/egg-white.svg)
-		background-size: 295.2px 228.6px
+		background-image: url(../img/egg-white-2.png)
+		background-size: 219px 164px
 		&-inner
 			margin: auto
 			width: 180px
@@ -371,17 +417,38 @@ body
 	a
 		text-decoration: none !important
 
+	&__menu
+		
+		ul
+			display: flex
+			flex-wrap: wrap
+			li
+				margin-right: 40px
+				margin-bottom: 39px
+				list-style-type: none
+				a
+					font-style: normal
+					font-weight: 400
+					font-size: 18px
+					line-height: 22px
+					color: #FFFFFF
+					text-decoration: none
+
 
 	.col-right
 		text-align: right
 	.phone
 		margin-bottom: 27px
+		margin-top: auto
+		margin-bottom: auto
 		a
 			font-weight: 600
 			font-size: 32px
 			line-height: 39px
 			color: #FFFFFF
-
+	.block-bottom
+		display: flex
+		justify-content: space-between
 	.contact
 		a
 			font-size: 22px

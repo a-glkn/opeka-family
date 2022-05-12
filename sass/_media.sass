@@ -2,10 +2,20 @@
 
 
 /*==========  Desktop First  ==========*/
-+media-breakpoint-down(xl)
+@media (max-width: 1400px)
 
-
-    
+    .header
+        &__menu
+            padding-left: 20px
+            padding-right: 20px
+            ul
+                li
+                    a
+                        font-size: 16px
+        .phone
+            min-width: 192px
+            a
+                font-size: 22px
 // ≥1200px
 +media-breakpoint-down(lg)
    
@@ -25,6 +35,29 @@
         background-size: 647px  448px
     .bg-lines
         background-size: 842px  478px
+
+    .header
+        &__menu
+            ul
+                li
+                    a
+                        font-size: 13px
+                        &:after
+                            margin-left: -24px
+                            width: 48px
+        .phone
+            min-width: 174px
+            a
+                font-size: 20px
+    .logo
+        width: 106px
+        min-width: 106px
+        height: 50px
+        background-size: 106px 50px
+
+    .wrapper
+        padding-left: 0
+        padding-right: 0
 // ≥992px
 +media-breakpoint-down(md)
     .heading
@@ -169,6 +202,22 @@
             margin-top: calc(-526px * 1.36)
             background-size: calc(2325px * 1.36) calc(1051px * 1.36)
        
+    .menu-toggler
+        display: inline-block
+
+    .header
+        &__menu
+            display: none
+        .phone 
+            display: none
+    .footer__menu
+        display: none
+
+    .footer
+        .block-bottom
+            flex-direction: column
+            text-align: right
+
 // ≥768px
 +media-breakpoint-down(sm)
     .egg
@@ -395,6 +444,13 @@
             margin-left: calc(-1163px * 1.65)
             margin-top: calc(-526px * 1.65)
             background-size: calc(2325px * 1.65) calc(1051px * 1.65)
+
+    .footer
+        .block-bottom
+            margin-top: 40px
+            text-align: center    
+            .phone
+                margin-bottom: 27px
 // ≥576px
 +media-breakpoint-down(xs)
 
