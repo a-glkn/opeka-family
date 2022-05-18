@@ -162,4 +162,9 @@ $(function() {
 			
 		});
 	}
+
+	$('.faq__q').on('click', function(e) {
+		var cont = $(this).parents('.faq');
+		$(cont).toggleClass('active');
+	});
 });

@@ -128,6 +128,8 @@ a.btn_secondary
                 left: 0
                 border-radius: 50%
 
+    ol
+        list-style-position: inside
 
 .slick-prev, .slick-next
     width: 50px
@@ -1191,3 +1193,77 @@ a.btn_secondary
         &:hover
             border-color: #91BF29
 
+.faq
+    border-radius: 30px
+    border: 2px solid #A4DDFF
+    margin-bottom: 20px
+    &__close
+        width: 30px
+        height: 30px
+        cursor: pointer
+        position: absolute
+        right: 30px
+        top: 30px
+        background-repeat: no-repeat
+        background-position: center
+        background-image: url(../img/close.svg)
+    &__q
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 130%
+        color: #303844
+        padding: 30px
+        position: relative
+        padding-right: 80px
+        cursor: pointer
+        user-select: none
+    &__a
+        display: none
+        padding: 30px
+        padding-top: 10px
+
+    &.active
+        .faq
+            &__close
+                transform: rotate(45deg)
+            &__a
+                display: block
+
+
+.img-block
+    background-color: #D7F0FF
+    border-radius: 30px
+    padding: 40px
+    img
+        width: 100%
+        height: auto
+    &_group
+        display: flex
+
+        .img-block
+            &__item
+                padding-right: 40px
+                padding-left: 40px
+                position: relative
+                &:after
+                    width: 62px
+                    height: 24px
+                    content: ''
+                    display: flex
+                    position: absolute
+                    right: -32px
+                    top: 50%
+                    margin-top: -12px
+                    background-repeat: no-repeat
+                    background-position: 0 0
+                    background-image: url(../img/arrow-right.svg)
+                &:last-child
+                    padding-right: 0
+                    &:after
+                        display: none
+                &:first-child
+                    padding-left: 0
+                    
+                
+        
