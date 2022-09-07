@@ -2,7 +2,7 @@ $(function() {
 
 	var dots = ($(".slider__item").length > 1) ? true : false; 
 
-	$('.slider').slick({
+	$('.slider:not(.slider_v-2)').slick({
 		dots: dots,
 		infinite: true,
 		speed: 300,
@@ -20,6 +20,33 @@ $(function() {
 		</button>`,
 	});
 
+	if( $('.slider_v-2').length ) {
+
+		$('.slider_v-2').slick({
+			dots: dots,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			fade: true,
+			arrows: true,
+			autoplay: true,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			  autoplaySpeed: 6000,
+			prevArrow: `<button type="button" class="slick-prev">
+			<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0.441406 11L9.4414 21.0125L11.5589 18.6568L4.67035 10.9933L11.5589 3.3299L9.4414 0.987549L0.441406 11Z" fill="#D6DBE1"/>
+			</svg>		
+			</button>`,
+			nextArrow: `<button type="button" class="slick-next">
+			<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0.441406 11L9.4414 21.0125L11.5589 18.6568L4.67035 10.9933L11.5589 3.3299L9.4414 0.987549L0.441406 11Z" fill="#D6DBE1"/>
+			</svg>
+			</button>`,
+		});
+
+	}
+	
 
 	$('.gallery').slick({
 		dots: false,
@@ -128,7 +155,7 @@ $(function() {
 	});
 
 
-    $('.form-order__input_tel, .form__input_tel').inputmask("+7 (999) 999 99 99");
+    $('.form-order__input_tel, .form__input_tel, .test-form__input_tel').inputmask("+7 (999) 999 99 99");
 
 	$('.filter-btn').on('click', function(e) {
 		$('.filter').addClass('active');

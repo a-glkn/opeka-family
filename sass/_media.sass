@@ -66,10 +66,15 @@
             .egg__text
                 font-size: 16px
 
+    .heading
+        &_lg
+            font-size: 48px
  
 // ≥992px
 +media-breakpoint-down(md)
     .heading
+        &_lg
+            font-size: 36px
         &_md
             font-size: 26px
 
@@ -236,6 +241,14 @@
                 display: none
             img
                 margin-bottom: 5px
+
+    .btns-app
+        flex-direction: column
+        .btn
+            display: none
+        img
+            margin-bottom: 5px
+
     .faq
         .img-block
             margin-bottom: 20px
@@ -297,6 +310,21 @@
     .egg
         &_opt_2, &_opt_3
             margin-top: -50px
+
+    .test-step_result
+        background: none
+
+    .test-form
+        margin-top: 30px
+
+    .test-btn_desktop
+        display: none
+    .test-btn_mob
+        display: inline-block
+
+    .section_test
+	    margin-top: 0
+        
 // ≥768px
 +media-breakpoint-down(sm)
     .egg
@@ -561,6 +589,12 @@
             margin-left: calc(-1367px * 1.4)
             margin-top: calc(-472px * 1.4)
             background-size: calc(2733px * 1.4) calc(943px * 1.4)
+
+    .test-step__heading
+        font-size: 20px
+
+    .test .text
+        font-size: 20px
 // ≥576px
 +media-breakpoint-down(xs)
 
@@ -594,10 +628,17 @@
                 left: 50%
                 transform: translateX(-50%)
 
-    
+    .btns-app
+        img
+            left: 0
+
     .egg
         &_opt_1, &_opt_2, &_opt_3 
             margin-left: -40px
+
+    .slider_v-2 
+        .slick-dots
+            margin-left: 15px
 /*==========  Mobile First  ==========*/
 
 // ≤576px

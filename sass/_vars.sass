@@ -40,6 +40,12 @@ $gutter: $grid-gutter-width
     &:hover
         opacity: 0.8
 .heading
+    &_lg
+        font-style: normal
+        font-weight: 600
+        font-size: 56px
+        line-height: 130%
+        color: #000000
     &_md
         font-weight: 600
         font-size: 36px
@@ -192,6 +198,32 @@ a.btn_secondary
                 button
                     background-color: $accent
 
+
+    &_v-2
+        .col-text
+            padding-top: 75px
+        .heading
+            margin-bottom: 16px
+
+        .slick-dots
+            justify-content: flex-start
+
+        .slick-arrow
+            background-color: #D7F0FF
+            svg
+                path
+                    fill: #303844
+                    transition: .3s ease
+
+            &:hover
+                svg
+                    path
+                        fill: $accent
+            &.slick-prev
+                left: -78px
+
+            &.slick-next
+                right: -78px
 
 .egg
     background-repeat: no-repeat
@@ -535,6 +567,21 @@ a.btn_secondary
     .egg__title
         margin-top: 10px
         width: 100%
+
+.bg-oval
+    position: relative
+    &:before
+        content: ''
+        display: block
+        width: 3502px
+        height: 622px
+        position: absolute
+        top: -20px
+        left: 50%
+        margin-left: -2000px
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-image: url(../img/oval-bg.svg)
 
 .card
     border: 1px solid #D7F0FF
@@ -1336,4 +1383,167 @@ a.btn_secondary
                     padding-left: 0
                     
                 
+.test
+    border-radius: 80px
+    border: 2px solid #A4DDFF
+    background-color: #fff
+    .text
+        margin-top: 8px
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 130%
+        color: #303844
+
         
+
+.test-form
+    &__input
+        width: 100%
+        padding: 10px 20px
+        border: 2px solid #A4DDFF
+        border-radius: 40px
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 36px
+        color: #939598
+        margin-bottom: 16px
+        transition: .3s ease
+        &.error
+            border-color: red
+
+.test-btn
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 36px
+    color: #303844
+    padding: 12px 45px
+    background: #A4DDFF
+    border-radius: 30px
+    display: inline-block
+    cursor: pointer
+    &_mob
+        display: none
+
+    &_restart
+        margin-top: 40px
+.test-step
+    padding: 60px 40px
+    display: none
+    &__heading
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 130%
+        color: #303844
+        margin-top: 24px
+        margin-bottom: 32px
+    &__nav
+        display: flex
+        justify-content: center
+        margin-top: 36px
+        div
+            margin-left: 7.5px
+            margin-right: 7.5px
+            border-radius: 50%
+            width: 16px
+            height: 16px
+            background-color: #F2F7FA
+            text-decoration: none
+            transition: .3s ease
+            cursor: default
+            &.active
+                background-color: #A4DDFF
+    &__prev
+        display: inline-flex
+        cursor: pointer
+        svg
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 10px
+            path
+                transition: .3s ease
+        span
+            margin-top: auto
+            margin-bottom: auto
+            font-style: normal
+            font-weight: 600
+            font-size: 18px
+            line-height: 130%
+            color: #666B71
+            transition: .3s ease
+        &:hover
+            svg
+                path
+                    fill: $accent
+            span
+                color: $accent
+
+
+    &_0
+        display: none
+    .test-btn_desktop
+        margin-top: 40px
+
+    .test-btn_mob
+        margin-top: 20px
+
+    &_result
+        background-repeat: no-repeat
+        background-position: right center
+        background-image: url(../img/test-res.png)
+        background-size: 608px 337px
+    .radios
+        p
+            padding: 0
+            margin: 0
+        label
+            margin-bottom: 24px
+            width: 100%
+            position: relative
+            padding-left: 30px
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.3
+            color: #303844
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) 
+            position: absolute
+            left: -9999px
+
+        [type="radio"]:checked + label
+            color: #303844
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+            position: relative
+            cursor: pointer
+            display: inline-block
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after 
+            content: ''
+            width: 20px
+            height: 20px
+            position: absolute
+            top: 2px
+            left: 0
+            border: 1px solid #A4DDFF
+            border-radius: 50%
+
+        [type="radio"]:checked + label:before
+            content: ''
+            display: block
+            width: 12px
+            height: 12px
+            background-color: #91BF29
+            position: absolute
+            left: 4px
+            top: 6px
+            border-radius: 50%
+
+
+    &.active
+        display: block
